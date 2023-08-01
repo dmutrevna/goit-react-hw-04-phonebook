@@ -1,24 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { ContactItem } from 'components/ContactItem/ContactItem ';
 import PropTypes from 'prop-types';
 
-export class ContactList extends Component {
-  render() {
-    const { contacts, onDeleteContact } = this.props;
-
-    return (
-      <ul>
-        {contacts.map(contact => (
-          <ContactItem
-            key={contact.id}
-            contact={contact}
-            onDeleteContact={onDeleteContact}
-          />
-        ))}
-      </ul>
-    );
-  }
-}
+export const ContactList = ({ contacts, onDeleteContact }) => {
+  return (
+    <ul>
+      {contacts.map(contact => (
+        <ContactItem
+          key={contact.id}
+          contact={contact}
+          onDeleteContact={onDeleteContact}
+        />
+      ))}
+    </ul>
+  );
+};
 
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
