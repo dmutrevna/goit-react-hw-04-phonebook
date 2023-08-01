@@ -58,7 +58,7 @@ export const App = () => {
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
   };
-
+  // nn
   const filteredContacts = filterContacts();
 
   return (
