@@ -50,7 +50,7 @@ export const App = () => {
   };
 
   const handleFilterChange = filter => {
-    setFilter({ filter });
+    setFilter(filter);
   };
 
   const filterContacts = () => {
@@ -58,7 +58,7 @@ export const App = () => {
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
   };
-  // nn
+
   const filteredContacts = filterContacts();
 
   return (
